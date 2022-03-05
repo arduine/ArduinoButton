@@ -1,0 +1,20 @@
+{
+  "name": "ArduinoButton",
+  "version": "1.0.0",
+  "keywords": "arduino, button, click",
+  "description": "Arduino通用按钮点击事件库，理论支持全部的Arduino框架板子，包括：Arduino,ESP8266,ESP32等等",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arduine/Button.git"
+  },
+  "authors": [
+    {
+      "name": "sollyu",
+      "email": "sollyu@qq.com",
+      "maintainer": true
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "*"
+}
