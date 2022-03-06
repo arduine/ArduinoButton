@@ -23,7 +23,7 @@ void ArduinoButton::loop() {
 void ArduinoButton::onLoopButtonPressed(const unsigned long millis) {
     if (mButtonState == ButtonStateEnum::PRESSED)
         return;
-    mButtonState = ButtonStateEnum::PRESSED;
+    mButtonState   = ButtonStateEnum::PRESSED;
     mPressedMillis = millis;
 }
 
@@ -31,9 +31,10 @@ void ArduinoButton::onLoopButtonReleased(const unsigned long millis) {
     if (mButtonState == ButtonStateEnum::RELEASED)
         return;
 
+    std::function<void()> empty = [] {};
     mButtonState = ButtonStateEnum::RELEASED;
     if (millis - mPressedMillis >= __ARDUINO_BUTTON_LONG_CLICK_MILLS_) {
-        if (mLongClickListener != nullptr) mLongClickListener();
+        mLongClickListener != nullptr ? mLongClickListener() : mClickListener != nullptr ? mClickListener() : empty();
     } else if (mClickListener != nullptr) {
         mClickListener();
     }
@@ -48,4 +49,5 @@ ArduinoButton ArduinoButton::setOnLongClickListener(const std::function<void()> 
     mLongClickListener = listener;
     return *this;
 }
+
 

@@ -61,7 +61,16 @@ private:
     ButtonStateEnum mButtonState = ButtonStateEnum::PRESSED;
 
 private:
+    /**
+     * loop函数上次执行的时间
+     * @since 1.0.0
+     */
     volatile unsigned long mLoopLatestMillis = 0;
+
+    /**
+     * 当前按钮被下的时间
+     * @since 1.0.0
+     */
     volatile unsigned long mPressedMillis = 0;
 
 private:

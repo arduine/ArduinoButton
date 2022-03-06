@@ -4,7 +4,7 @@
 
 一个几乎支持全部Arduino的按钮点击事件库。
 
-> ⚠️ 注意：
+> #### ⚠️ 注意：
 >
 > 有些板子的IO对输入模式不支持，比如ESP32的`GPIO_34`、`GPIO_35`。
 >
@@ -30,7 +30,7 @@ TODO
 1. 增加头文件导入：
 
 ```c++
-#include <Arduino.h>
+#include <ArduinoButton.h>
 ```
 
 2. 声明变量并设置回调
