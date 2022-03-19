@@ -14,10 +14,6 @@
  * limitations under the License.
  */
 
-//
-// Created by Sollyu on 2022/3/5.
-//
-
 #include "ArduinoButton.h"
 
 ArduinoButton::ArduinoButton(const unsigned int pin, unsigned short mode, unsigned short flag) : mPin(pin), mButtonPressedFlag(flag) {
